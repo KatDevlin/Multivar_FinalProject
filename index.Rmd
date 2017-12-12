@@ -94,8 +94,8 @@ y <- read.csv("PewGlobal2015_cleaner.csv", header = T, stringsAsFactors = F)
 y$Q1[y$Q1=="A particularly good day"] <- 1
 y$Q1[y$Q1=="A typical day"] <- 2
 y$Q1[y$Q1=="A particularly bad day"] <- 3
-y$Q1[y$Q1=="Don’t know"] <- 99
-y$Q1[y$Q1=="Refused"] <- 99
+y$Q1[y$Q1=="Don’t know"] <- NA
+y$Q1[y$Q1=="Refused"] <- NA
 table(y$Q1)
 y$Q1 <- as.numeric(y$Q1)
 
@@ -104,8 +104,8 @@ y$Q3[y$Q3=="Very good"] <- 1
 y$Q3[y$Q3=="Somewhat good"] <- 2
 y$Q3[y$Q3=="Somewhat bad"] <- 3
 y$Q3[y$Q3=="Very bad"] <- 4
-y$Q3[y$Q3=="Don’t know"] <- 99
-y$Q3[y$Q3=="Refused"] <- 99
+y$Q3[y$Q3=="Don’t know"] <- NA
+y$Q3[y$Q3=="Refused"] <- NA
 table(y$Q3)
 y$Q3 <- as.numeric(y$Q3)
 
@@ -115,17 +115,17 @@ y$Q4[y$Q4=="Improve a little"] <- 2
 y$Q4[y$Q4=="Remain the same"] <- 3
 y$Q4[y$Q4=="Worsen a little"] <- 4
 y$Q4[y$Q4=="Worsen a lot"] <- 5
-y$Q4[y$Q4=="Don’t know"] <- 99
-y$Q4[y$Q4=="Refused"] <- 99
+y$Q4[y$Q4=="Don’t know"] <- NA
+y$Q4[y$Q4=="Refused"] <- NA
 table(y$Q4)
 y$Q4 <- as.numeric(y$Q4)
 
 table(y$Q6)
 y$Q6[y$Q6=="Better off"] <- 1
-y$Q6[y$Q6=="Worse off"] <- 2
-y$Q6[y$Q6=="Same (Volunteered)"] <- 3
-y$Q6[y$Q6=="Don’t know"] <- 99
-y$Q6[y$Q6=="Refused"] <- 99
+y$Q6[y$Q6=="Worse off"] <- 3
+y$Q6[y$Q6=="Same (Volunteered)"] <- 2
+y$Q6[y$Q6=="Don’t know"] <- NA
+y$Q6[y$Q6=="Refused"] <- NA
 table(y$Q6)
 y$Q6 <- as.numeric(y$Q6)
 
@@ -133,40 +133,40 @@ y$Q12A[y$Q12A=="Very favorable"] <- 1
 y$Q12A[y$Q12A=="Somewhat favorable"] <- 2
 y$Q12A[y$Q12A=="Somewhat unfavorable "] <- 3
 y$Q12A[y$Q12A=="Very unfavorable "] <- 4
-y$Q12A[y$Q12A=="Don’t know"] <- 99
-y$Q12A[y$Q12A=="Refused"] <- 99
+y$Q12A[y$Q12A=="Don’t know"] <- NA
+y$Q12A[y$Q12A=="Refused"] <- NA
 y$Q12A <- as.numeric(y$Q12A)
 
 y$Q12B[y$Q12B=="Very favorable"] <- 1
 y$Q12B[y$Q12B=="Somewhat favorable"] <- 2
 y$Q12B[y$Q12B=="Somewhat unfavorable "] <- 3
 y$Q12B[y$Q12B=="Very unfavorable "] <- 4
-y$Q12B[y$Q12B=="Don’t know"] <- 99
-y$Q12B[y$Q12B=="Refused"] <- 99
+y$Q12B[y$Q12B=="Don’t know"] <- NA
+y$Q12B[y$Q12B=="Refused"] <- NA
 y$Q12B <- as.numeric(y$Q12B)
 
 y$Q12C[y$Q12C=="Very favorable"] <- 1
 y$Q12C[y$Q12C=="Somewhat favorable"] <- 2
 y$Q12C[y$Q12C=="Somewhat unfavorable "] <- 3
 y$Q12C[y$Q12C=="Very unfavorable "] <- 4
-y$Q12C[y$Q12C=="Don’t know"] <- 99
-y$Q12C[y$Q12C=="Refused"] <- 99
+y$Q12C[y$Q12C=="Don’t know"] <- NA
+y$Q12C[y$Q12C=="Refused"] <- NA
 y$Q12C <- as.numeric(y$Q12C)
 
 y$Q12D[y$Q12D=="Very favorable"] <- 1
 y$Q12D[y$Q12D=="Somewhat favorable"] <- 2
 y$Q12D[y$Q12D=="Somewhat unfavorable "] <- 3
 y$Q12D[y$Q12D=="Very unfavorable "] <- 4
-y$Q12D[y$Q12D=="Don’t know"] <- 99
-y$Q12D[y$Q12D=="Refused"] <- 99
+y$Q12D[y$Q12D=="Don’t know"] <- NA
+y$Q12D[y$Q12D=="Refused"] <- NA
 y$Q12D <- as.numeric(y$Q12D)
 
 y$Q13A[y$Q13A=="Very concerned"] <- 1
 y$Q13A[y$Q13A=="Somewhat concerned"] <- 2
 y$Q13A[y$Q13A=="Not too concerned"] <- 3
 y$Q13A[y$Q13A=="Not at all concerned"] <- 4
-y$Q13A[y$Q13A=="Don't know"] <- 99
-y$Q13A[y$Q13A=="Refused"] <- 99
+y$Q13A[y$Q13A=="Don't know"] <- NA
+y$Q13A[y$Q13A=="Refused"] <- NA
 table(y$Q13A)
 y$Q13A <- as.numeric(y$Q13A)
 
@@ -174,8 +174,8 @@ y$Q13B[y$Q13B=="Very concerned"] <- 1
 y$Q13B[y$Q13B=="Somewhat concerned"] <- 2
 y$Q13B[y$Q13B=="Not too concerned"] <- 3
 y$Q13B[y$Q13B=="Not at all concerned"] <- 4
-y$Q13B[y$Q13B=="Don't know"] <- 99
-y$Q13B[y$Q13B=="Refused"] <- 99
+y$Q13B[y$Q13B=="Don't know"] <- NA
+y$Q13B[y$Q13B=="Refused"] <- NA
 table(y$Q13B)
 y$Q13B <- as.numeric(y$Q13B)
 
@@ -183,8 +183,8 @@ y$Q13E[y$Q13E=="Very concerned"] <- 1
 y$Q13E[y$Q13E=="Somewhat concerned"] <- 2
 y$Q13E[y$Q13E=="Not too concerned"] <- 3
 y$Q13E[y$Q13E=="Not at all concerned"] <- 4
-y$Q13E[y$Q13E=="Don't know"] <- 99
-y$Q13E[y$Q13E=="Refused"] <- 99
+y$Q13E[y$Q13E=="Don't know"] <- NA
+y$Q13E[y$Q13E=="Refused"] <- NA
 table(y$Q13E)
 y$Q13E <- as.numeric(y$Q13E)
 
@@ -192,8 +192,8 @@ y$Q13F[y$Q13F=="Very concerned"] <- 1
 y$Q13F[y$Q13F=="Somewhat concerned"] <- 2
 y$Q13F[y$Q13F=="Not too concerned"] <- 3
 y$Q13F[y$Q13F=="Not at all concerned"] <- 4
-y$Q13F[y$Q13F=="Don't know"] <- 99
-y$Q13F[y$Q13F=="Refused"] <- 99
+y$Q13F[y$Q13F=="Don't know"] <- NA
+y$Q13F[y$Q13F=="Refused"] <- NA
 table(y$Q13F)
 y$Q13F <- as.numeric(y$Q13F)
 
@@ -201,8 +201,8 @@ y$Q13G[y$Q13G=="Very concerned"] <- 1
 y$Q13G[y$Q13G=="Somewhat concerned"] <- 2
 y$Q13G[y$Q13G=="Not too concerned"] <- 3
 y$Q13G[y$Q13G=="Not at all concerned"] <- 4
-y$Q13G[y$Q13G=="Don't know"] <- 99
-y$Q13G[y$Q13G=="Refused"] <- 99
+y$Q13G[y$Q13G=="Don't know"] <- NA
+y$Q13G[y$Q13G=="Refused"] <- NA
 table(y$Q13G)
 y$Q13G <- as.numeric(y$Q13G)
 
@@ -212,23 +212,23 @@ y$Q17[y$Q17=="Japan OR"] <- 3
 y$Q17[y$Q17=="The countries of the European Union"] <- 4
 y$Q17[y$Q17=="None / There is no leading economic power (Volunteered) "] <- 5
 y$Q17[y$Q17=="Other (Volunteered) "] <- 6
-y$Q17[y$Q17=="Don’t know"] <- 99
-y$Q17[y$Q17=="Refused"] <- 99
+y$Q17[y$Q17=="Don’t know"] <- NA
+y$Q17[y$Q17=="Refused"] <- NA
 table(y$Q17)
 y$Q17 <- as.numeric(y$Q17)
 
 y$Q18[y$Q18=="Will never replace U.S."] <- 1
 y$Q18[y$Q18=="Will eventually replace U.S."] <- 2
 y$Q18[y$Q18=="Has already replaced U.S."] <- 3
-y$Q18[y$Q18=="Don’t know"] <- 99
-y$Q18[y$Q18=="Refused"] <- 99
+y$Q18[y$Q18=="Don’t know"] <- NA
+y$Q18[y$Q18=="Refused"] <- NA
 table(y$Q18)
 y$Q18 <- as.numeric(y$Q18)
 
 y$Q19B[y$Q19B=="Yes - respects personal freedoms"] <- 1
 y$Q19B[y$Q19B=="No – does not respect personal freedoms"] <- 2
-y$Q19B[y$Q19B=="Don't know"] <- 99
-y$Q19B[y$Q19B=="Refused"] <- 99
+y$Q19B[y$Q19B=="Don't know"] <- NA
+y$Q19B[y$Q19B=="Refused"] <- NA
 table(y$Q19B)
 y$Q19B <- as.numeric(y$Q19B)
 
@@ -237,16 +237,16 @@ for (i in 18:19){
   y[,i] <- gsub("Some confidence", 2, y[,i])
   y[,i] <- gsub("Not too much confidence", 3, y[,i])
   y[,i] <- gsub("No confidence at all", 4, y[,i])
-  y[,i] <- gsub("Don’t know", 99, y[,i])
-  y[,i] <- gsub("Refused", 99, y[,i])
+  y[,i] <- gsub("Don’t know", NA, y[,i])
+  y[,i] <- gsub("Refused", NA, y[,i])
   y[,i] <- as.numeric(y[,i])
 }
 
 for (i in 20:26){
   y[,i] <- gsub("Approve", 1, y[,i])
-  y[,i] <- gsub("Disapprove", 0, y[,i])
-  y[,i] <- gsub("Don't know", 99, y[,i])
-  y[,i] <- gsub("Refused", 99, y[,i])
+  y[,i] <- gsub("Disapprove", 2, y[,i])
+  y[,i] <- gsub("Don't know", NA, y[,i])
+  y[,i] <- gsub("Refused", NA, y[,i])
   y[,i] <- as.numeric(y[,i])
 }
 
@@ -254,8 +254,8 @@ y$Q32[y$Q32=="Very serious"] <- 1
 y$Q32[y$Q32=="Somewhat serious"] <- 2
 y$Q32[y$Q32=="Not too serious"] <- 3
 y$Q32[y$Q32=="Not a problem"] <- 4
-y$Q32[y$Q32=="Don't know"] <- 99
-y$Q32[y$Q32=="Refused"] <- 99
+y$Q32[y$Q32=="Don't know"] <- NA
+y$Q32[y$Q32=="Refused"] <- NA
 table(y$Q32)
 y$Q32 <- as.numeric(y$Q32)
 
@@ -263,24 +263,24 @@ y$Q33[y$Q33=="Technology can solve the problem without major changes"] <- 1
 y$Q33[y$Q33=="Have to make major changes"] <- 2
 y$Q33[y$Q33=="Neither (Volunteered)"] <- 3
 y$Q33[y$Q33=="Climate change does not exist (Volunteered)"] <- 4
-y$Q33[y$Q33=="Don't know"] <- 99
-y$Q33[y$Q33=="Refused"] <- 99
+y$Q33[y$Q33=="Don't know"] <- NA
+y$Q33[y$Q33=="Refused"] <- NA
 table(y$Q33)
 y$Q33 <- as.numeric(y$Q33)
 
 y$Q39[y$Q39=="Justified"] <- 1
 y$Q39[y$Q39=="Not Justified"] <- 2
 y$Q39[y$Q39=="Depends (Volunteered)"] <- 3
-y$Q39[y$Q39=="Don't know"] <- 99
-y$Q39[y$Q39=="Refused"] <- 99
+y$Q39[y$Q39=="Don't know"] <- NA
+y$Q39[y$Q39=="Refused"] <- NA
 table(y$Q39)
 y$Q39 <- as.numeric(y$Q39)
 
 y$Q40[y$Q40=="Support"] <- 1
 y$Q40[y$Q40=="Oppose"] <- 2
 y$Q40[y$Q40=="Climate change does not exist (Volunteered)"] <- 3
-y$Q40[y$Q40=="Don't know"] <- 99
-y$Q40[y$Q40=="Refused"] <- 99
+y$Q40[y$Q40=="Don't know"] <- NA
+y$Q40[y$Q40=="Refused"] <- NA
 table(y$Q40)
 y$Q40 <- as.numeric(y$Q40)
 
@@ -289,8 +289,8 @@ y$Q41[y$Q41=="In the next few years"] <- 2
 y$Q41[y$Q41=="Not for many years"] <- 3
 y$Q41[y$Q41=="Never"] <- 4
 y$Q41[y$Q41=="Climate change does not exist (Volunteered)"] <- 5
-y$Q41[y$Q41=="Don't know"] <- 99
-y$Q41[y$Q41=="Refused"] <- 99
+y$Q41[y$Q41=="Don't know"] <- NA
+y$Q41[y$Q41=="Refused"] <- NA
 table(y$Q41)
 y$Q41 <- as.numeric(y$Q41)
 
@@ -299,8 +299,8 @@ y$Q42[y$Q42=="Somewhat concerned"] <- 2
 y$Q42[y$Q42=="Not too concerned"] <- 3
 y$Q42[y$Q42=="Not at all concerned"] <- 4
 y$Q42[y$Q42=="Climate change does not exist (Volunteered)"] <- 5
-y$Q42[y$Q42=="Don't know"] <- 99
-y$Q42[y$Q42=="Refused"] <- 99
+y$Q42[y$Q42=="Don't know"] <- NA
+y$Q42[y$Q42=="Refused"] <- NA
 table(y$Q42)
 y$Q42 <- as.numeric(y$Q42)
 
@@ -309,32 +309,32 @@ y$Q43[y$Q43=="Long periods of unusually hot weather"] <- 2
 y$Q43[y$Q43=="Rising sea levels"] <- 3
 y$Q43[y$Q43=="Severe weather, like floods or intense storms"] <- 4
 y$Q43[y$Q43=="Climate change does not exist (Volunteered)"] <- 5
-y$Q43[y$Q43=="Don't know"] <- 99
-y$Q43[y$Q43=="Refused"] <- 99
+y$Q43[y$Q43=="Don't know"] <- NA
+y$Q43[y$Q43=="Refused"] <- NA
 table(y$Q43)
 y$Q43 <- as.numeric(y$Q43)
 
 y$Q44[y$Q44=="Rich countries, such as the U.S., Japan and Germany, should do more than developing countries because they have produced"] <- 1
 y$Q44[y$Q44=="Developing countries should do just as much as rich countries because they will produce most of the world's greenhouse g"] <- 2
 y$Q44[y$Q44=="Rising sea levels"] <- 3
-y$Q44[y$Q44=="Climate change does not exist (Volunteered)"] <- 5
-y$Q44[y$Q44=="Don't know"] <- 99
-y$Q44[y$Q44=="Refused"] <- 99
+y$Q44[y$Q44=="Climate change does not exist (Volunteered)"] <- 4
+y$Q44[y$Q44=="Don't know"] <- NA
+y$Q44[y$Q44=="Refused"] <- NA
 table(y$Q44)
 y$Q44 <- as.numeric(y$Q44)
 
 
 y$Q70[y$Q70=="Yes"] <- 1
 y$Q70[y$Q70=="No"] <- 2
-y$Q70[y$Q70=="Don’t know"] <- 99
-y$Q70[y$Q70=="Refused"] <- 99
+y$Q70[y$Q70=="Don’t know"] <- NA
+y$Q70[y$Q70=="Refused"] <- NA
 table(y$Q70)
 y$Q70 <- as.numeric(y$Q70)
 
 y$Q71[y$Q71=="Yes"] <- 1
 y$Q71[y$Q71=="No"] <- 2
-y$Q71[y$Q71=="Don’t know"] <- 99
-y$Q71[y$Q71=="Refused"] <- 99
+y$Q71[y$Q71=="Don’t know"] <- NA
+y$Q71[y$Q71=="Refused"] <- NA
 table(y$Q71)
 y$Q71 <- as.numeric(y$Q71)
 
@@ -342,8 +342,8 @@ y$Q152[y$Q152=="Very important"] <- 1
 y$Q152[y$Q152=="Somewhat important"] <- 2
 y$Q152[y$Q152=="Not too important"] <- 3
 y$Q152[y$Q152=="Not at all important"] <- 4
-y$Q152[y$Q152=="Don't know"] <- 99
-y$Q152[y$Q152=="Refused"] <- 99
+y$Q152[y$Q152=="Don't know"] <- NA
+y$Q152[y$Q152=="Refused"] <- NA
 table(y$Q152)
 y$Q152 <- as.numeric(y$Q152)
 
@@ -354,10 +354,14 @@ y$Q164[y$Q164=="Doing housework, looking after the home, children or other perso
 y$Q164[y$Q164=="Permanently sick or disabled"] <- 5
 y$Q164[y$Q164=="Retired"] <- 6
 y$Q164[y$Q164=="Unemployed and looking for a job"] <- 7
-y$Q164[y$Q164=="Don’t know"] <- 99
-y$Q164[y$Q164=="Refused"] <- 99
+y$Q164[y$Q164=="Don’t know"] <- NA
+y$Q164[y$Q164=="Refused"] <- NA
 table(y$Q164)
 y$Q164 <- as.numeric(y$Q164)
+
+# We're throwing out all the missing data instead of trying to impute or code at 99
+y <- y[complete.cases(y),]
+
 
 # Now we can write the final clean version of the Pew Research data 
 # write.csv(y, file = "PewGlobal2015_cleanest.csv", row.names = F)
@@ -369,7 +373,7 @@ y <- read.csv("PewGlobal2015_cleanest.csv", header = T, stringsAsFactors = F)
 
 With the Pew Research individual-level data now in usable form, we need to 1) create a country-level dataset to make cross-country comparisons and 2) find and merge this data with some World Bank indicators we think will be interesting.
 
-After much discussion with our stats professor, my partner and I settled on not using the survey weights and using country means to present the data at the country level. Not the original plan - I had the weights syntax ready to go - but our professor told us to skip all that and just focus on the multivariate analysis part of the project.
+After much discussion with our stats professor, my partner and I settled on not using the survey weights and using country means to present the data at the country level. For this we had to mark as `NA` any "Don't know" or "Refused" responses to the questions, which knocked out a lot of respondents but still left us with n > 15K. Not the original plan - I had the weights syntax ready to go and originally recoded differently - but our professor told us to skip all that and just focus on the multivariate analysis part of the project without worrying about the DKs or trying to impute.
 
 # Create Country-Level Data
 ```{r}

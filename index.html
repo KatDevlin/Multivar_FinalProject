@@ -203,12 +203,12 @@ y &lt;- read.csv(&quot;PewGlobal2015_cleaner.csv&quot;, header = T, stringsAsFac
 y$Q1[y$Q1==&quot;A particularly good day&quot;] &lt;- 1
 y$Q1[y$Q1==&quot;A typical day&quot;] &lt;- 2
 y$Q1[y$Q1==&quot;A particularly bad day&quot;] &lt;- 3
-y$Q1[y$Q1==&quot;Don’t know&quot;] &lt;- 99
-y$Q1[y$Q1==&quot;Refused&quot;] &lt;- 99
+y$Q1[y$Q1==&quot;Don’t know&quot;] &lt;- NA
+y$Q1[y$Q1==&quot;Refused&quot;] &lt;- NA
 table(y$Q1)</code></pre>
 <pre><code>## 
-##     1     2     3    99 
-## 13431 28617  3075   312</code></pre>
+##     1     2     3 
+## 13431 28617  3075</code></pre>
 <pre class="r"><code>y$Q1 &lt;- as.numeric(y$Q1)
 
 table(y$Q3)</code></pre>
@@ -221,12 +221,12 @@ table(y$Q3)</code></pre>
 y$Q3[y$Q3==&quot;Somewhat good&quot;] &lt;- 2
 y$Q3[y$Q3==&quot;Somewhat bad&quot;] &lt;- 3
 y$Q3[y$Q3==&quot;Very bad&quot;] &lt;- 4
-y$Q3[y$Q3==&quot;Don’t know&quot;] &lt;- 99
-y$Q3[y$Q3==&quot;Refused&quot;] &lt;- 99
+y$Q3[y$Q3==&quot;Don’t know&quot;] &lt;- NA
+y$Q3[y$Q3==&quot;Refused&quot;] &lt;- NA
 table(y$Q3)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-##  4616 16403 13634 10066   716</code></pre>
+##     1     2     3     4 
+##  4616 16403 13634 10066</code></pre>
 <pre class="r"><code>y$Q3 &lt;- as.numeric(y$Q3)
 
 table(y$Q4)</code></pre>
@@ -240,12 +240,12 @@ y$Q4[y$Q4==&quot;Improve a little&quot;] &lt;- 2
 y$Q4[y$Q4==&quot;Remain the same&quot;] &lt;- 3
 y$Q4[y$Q4==&quot;Worsen a little&quot;] &lt;- 4
 y$Q4[y$Q4==&quot;Worsen a lot&quot;] &lt;- 5
-y$Q4[y$Q4==&quot;Don’t know&quot;] &lt;- 99
-y$Q4[y$Q4==&quot;Refused&quot;] &lt;- 99
+y$Q4[y$Q4==&quot;Don’t know&quot;] &lt;- NA
+y$Q4[y$Q4==&quot;Refused&quot;] &lt;- NA
 table(y$Q4)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5    99 
-##  6844 14794 12977  5625  3374  1821</code></pre>
+##     1     2     3     4     5 
+##  6844 14794 12977  5625  3374</code></pre>
 <pre class="r"><code>y$Q4 &lt;- as.numeric(y$Q4)
 
 table(y$Q6)</code></pre>
@@ -255,106 +255,106 @@ table(y$Q6)</code></pre>
 ## Same (Volunteered)          Worse off 
 ##               3813              16275</code></pre>
 <pre class="r"><code>y$Q6[y$Q6==&quot;Better off&quot;] &lt;- 1
-y$Q6[y$Q6==&quot;Worse off&quot;] &lt;- 2
-y$Q6[y$Q6==&quot;Same (Volunteered)&quot;] &lt;- 3
-y$Q6[y$Q6==&quot;Don’t know&quot;] &lt;- 99
-y$Q6[y$Q6==&quot;Refused&quot;] &lt;- 99
+y$Q6[y$Q6==&quot;Worse off&quot;] &lt;- 3
+y$Q6[y$Q6==&quot;Same (Volunteered)&quot;] &lt;- 2
+y$Q6[y$Q6==&quot;Don’t know&quot;] &lt;- NA
+y$Q6[y$Q6==&quot;Refused&quot;] &lt;- NA
 table(y$Q6)</code></pre>
 <pre><code>## 
-##     1     2     3    99 
-## 22714 16275  3813  2633</code></pre>
+##     1     2     3 
+## 22714  3813 16275</code></pre>
 <pre class="r"><code>y$Q6 &lt;- as.numeric(y$Q6)
 
 y$Q12A[y$Q12A==&quot;Very favorable&quot;] &lt;- 1
 y$Q12A[y$Q12A==&quot;Somewhat favorable&quot;] &lt;- 2
 y$Q12A[y$Q12A==&quot;Somewhat unfavorable &quot;] &lt;- 3
 y$Q12A[y$Q12A==&quot;Very unfavorable &quot;] &lt;- 4
-y$Q12A[y$Q12A==&quot;Don’t know&quot;] &lt;- 99
-y$Q12A[y$Q12A==&quot;Refused&quot;] &lt;- 99
+y$Q12A[y$Q12A==&quot;Don’t know&quot;] &lt;- NA
+y$Q12A[y$Q12A==&quot;Refused&quot;] &lt;- NA
 y$Q12A &lt;- as.numeric(y$Q12A)
 
 y$Q12B[y$Q12B==&quot;Very favorable&quot;] &lt;- 1
 y$Q12B[y$Q12B==&quot;Somewhat favorable&quot;] &lt;- 2
 y$Q12B[y$Q12B==&quot;Somewhat unfavorable &quot;] &lt;- 3
 y$Q12B[y$Q12B==&quot;Very unfavorable &quot;] &lt;- 4
-y$Q12B[y$Q12B==&quot;Don’t know&quot;] &lt;- 99
-y$Q12B[y$Q12B==&quot;Refused&quot;] &lt;- 99
+y$Q12B[y$Q12B==&quot;Don’t know&quot;] &lt;- NA
+y$Q12B[y$Q12B==&quot;Refused&quot;] &lt;- NA
 y$Q12B &lt;- as.numeric(y$Q12B)
 
 y$Q12C[y$Q12C==&quot;Very favorable&quot;] &lt;- 1
 y$Q12C[y$Q12C==&quot;Somewhat favorable&quot;] &lt;- 2
 y$Q12C[y$Q12C==&quot;Somewhat unfavorable &quot;] &lt;- 3
 y$Q12C[y$Q12C==&quot;Very unfavorable &quot;] &lt;- 4
-y$Q12C[y$Q12C==&quot;Don’t know&quot;] &lt;- 99
-y$Q12C[y$Q12C==&quot;Refused&quot;] &lt;- 99
+y$Q12C[y$Q12C==&quot;Don’t know&quot;] &lt;- NA
+y$Q12C[y$Q12C==&quot;Refused&quot;] &lt;- NA
 y$Q12C &lt;- as.numeric(y$Q12C)
 
 y$Q12D[y$Q12D==&quot;Very favorable&quot;] &lt;- 1
 y$Q12D[y$Q12D==&quot;Somewhat favorable&quot;] &lt;- 2
 y$Q12D[y$Q12D==&quot;Somewhat unfavorable &quot;] &lt;- 3
 y$Q12D[y$Q12D==&quot;Very unfavorable &quot;] &lt;- 4
-y$Q12D[y$Q12D==&quot;Don’t know&quot;] &lt;- 99
-y$Q12D[y$Q12D==&quot;Refused&quot;] &lt;- 99
+y$Q12D[y$Q12D==&quot;Don’t know&quot;] &lt;- NA
+y$Q12D[y$Q12D==&quot;Refused&quot;] &lt;- NA
 y$Q12D &lt;- as.numeric(y$Q12D)
 
 y$Q13A[y$Q13A==&quot;Very concerned&quot;] &lt;- 1
 y$Q13A[y$Q13A==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q13A[y$Q13A==&quot;Not too concerned&quot;] &lt;- 3
 y$Q13A[y$Q13A==&quot;Not at all concerned&quot;] &lt;- 4
-y$Q13A[y$Q13A==&quot;Don't know&quot;] &lt;- 99
-y$Q13A[y$Q13A==&quot;Refused&quot;] &lt;- 99
+y$Q13A[y$Q13A==&quot;Don't know&quot;] &lt;- NA
+y$Q13A[y$Q13A==&quot;Refused&quot;] &lt;- NA
 table(y$Q13A)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 21101 15343  5441  2379  1171</code></pre>
+##     1     2     3     4 
+## 21101 15343  5441  2379</code></pre>
 <pre class="r"><code>y$Q13A &lt;- as.numeric(y$Q13A)
 
 y$Q13B[y$Q13B==&quot;Very concerned&quot;] &lt;- 1
 y$Q13B[y$Q13B==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q13B[y$Q13B==&quot;Not too concerned&quot;] &lt;- 3
 y$Q13B[y$Q13B==&quot;Not at all concerned&quot;] &lt;- 4
-y$Q13B[y$Q13B==&quot;Don't know&quot;] &lt;- 99
-y$Q13B[y$Q13B==&quot;Refused&quot;] &lt;- 99
+y$Q13B[y$Q13B==&quot;Don't know&quot;] &lt;- NA
+y$Q13B[y$Q13B==&quot;Refused&quot;] &lt;- NA
 table(y$Q13B)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 19402 10836  6328  4096  4773</code></pre>
+##     1     2     3     4 
+## 19402 10836  6328  4096</code></pre>
 <pre class="r"><code>y$Q13B &lt;- as.numeric(y$Q13B)
 
 y$Q13E[y$Q13E==&quot;Very concerned&quot;] &lt;- 1
 y$Q13E[y$Q13E==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q13E[y$Q13E==&quot;Not too concerned&quot;] &lt;- 3
 y$Q13E[y$Q13E==&quot;Not at all concerned&quot;] &lt;- 4
-y$Q13E[y$Q13E==&quot;Don't know&quot;] &lt;- 99
-y$Q13E[y$Q13E==&quot;Refused&quot;] &lt;- 99
+y$Q13E[y$Q13E==&quot;Don't know&quot;] &lt;- NA
+y$Q13E[y$Q13E==&quot;Refused&quot;] &lt;- NA
 table(y$Q13E)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 13686 11854  8179  5563  6153</code></pre>
+##     1     2     3     4 
+## 13686 11854  8179  5563</code></pre>
 <pre class="r"><code>y$Q13E &lt;- as.numeric(y$Q13E)
 
 y$Q13F[y$Q13F==&quot;Very concerned&quot;] &lt;- 1
 y$Q13F[y$Q13F==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q13F[y$Q13F==&quot;Not too concerned&quot;] &lt;- 3
 y$Q13F[y$Q13F==&quot;Not at all concerned&quot;] &lt;- 4
-y$Q13F[y$Q13F==&quot;Don't know&quot;] &lt;- 99
-y$Q13F[y$Q13F==&quot;Refused&quot;] &lt;- 99
+y$Q13F[y$Q13F==&quot;Don't know&quot;] &lt;- NA
+y$Q13F[y$Q13F==&quot;Refused&quot;] &lt;- NA
 table(y$Q13F)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 13904 12917  7822  5547  5245</code></pre>
+##     1     2     3     4 
+## 13904 12917  7822  5547</code></pre>
 <pre class="r"><code>y$Q13F &lt;- as.numeric(y$Q13F)
 
 y$Q13G[y$Q13G==&quot;Very concerned&quot;] &lt;- 1
 y$Q13G[y$Q13G==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q13G[y$Q13G==&quot;Not too concerned&quot;] &lt;- 3
 y$Q13G[y$Q13G==&quot;Not at all concerned&quot;] &lt;- 4
-y$Q13G[y$Q13G==&quot;Don't know&quot;] &lt;- 99
-y$Q13G[y$Q13G==&quot;Refused&quot;] &lt;- 99
+y$Q13G[y$Q13G==&quot;Don't know&quot;] &lt;- NA
+y$Q13G[y$Q13G==&quot;Refused&quot;] &lt;- NA
 table(y$Q13G)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 18511 15797  5612  2537  2978</code></pre>
+##     1     2     3     4 
+## 18511 15797  5612  2537</code></pre>
 <pre class="r"><code>y$Q13G &lt;- as.numeric(y$Q13G)
 
 y$Q17[y$Q17==&quot;The United States&quot;] &lt;- 1
@@ -363,33 +363,33 @@ y$Q17[y$Q17==&quot;Japan OR&quot;] &lt;- 3
 y$Q17[y$Q17==&quot;The countries of the European Union&quot;] &lt;- 4
 y$Q17[y$Q17==&quot;None / There is no leading economic power (Volunteered) &quot;] &lt;- 5
 y$Q17[y$Q17==&quot;Other (Volunteered) &quot;] &lt;- 6
-y$Q17[y$Q17==&quot;Don’t know&quot;] &lt;- 99
-y$Q17[y$Q17==&quot;Refused&quot;] &lt;- 99
+y$Q17[y$Q17==&quot;Don’t know&quot;] &lt;- NA
+y$Q17[y$Q17==&quot;Refused&quot;] &lt;- NA
 table(y$Q17)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5     6    99 
-## 22713 12827  2882  2740   678   272  3323</code></pre>
+##     1     2     3     4     5     6 
+## 22713 12827  2882  2740   678   272</code></pre>
 <pre class="r"><code>y$Q17 &lt;- as.numeric(y$Q17)
 
 y$Q18[y$Q18==&quot;Will never replace U.S.&quot;] &lt;- 1
 y$Q18[y$Q18==&quot;Will eventually replace U.S.&quot;] &lt;- 2
 y$Q18[y$Q18==&quot;Has already replaced U.S.&quot;] &lt;- 3
-y$Q18[y$Q18==&quot;Don’t know&quot;] &lt;- 99
-y$Q18[y$Q18==&quot;Refused&quot;] &lt;- 99
+y$Q18[y$Q18==&quot;Don’t know&quot;] &lt;- NA
+y$Q18[y$Q18==&quot;Refused&quot;] &lt;- NA
 table(y$Q18)</code></pre>
 <pre><code>## 
-##     1     2     3    99 
-## 16365 15680  6453  6937</code></pre>
+##     1     2     3 
+## 16365 15680  6453</code></pre>
 <pre class="r"><code>y$Q18 &lt;- as.numeric(y$Q18)
 
 y$Q19B[y$Q19B==&quot;Yes - respects personal freedoms&quot;] &lt;- 1
 y$Q19B[y$Q19B==&quot;No – does not respect personal freedoms&quot;] &lt;- 2
-y$Q19B[y$Q19B==&quot;Don't know&quot;] &lt;- 99
-y$Q19B[y$Q19B==&quot;Refused&quot;] &lt;- 99
+y$Q19B[y$Q19B==&quot;Don't know&quot;] &lt;- NA
+y$Q19B[y$Q19B==&quot;Refused&quot;] &lt;- NA
 table(y$Q19B)</code></pre>
 <pre><code>## 
-##     1     2    99 
-## 27839 11987  5609</code></pre>
+##     1     2 
+## 27839 11987</code></pre>
 <pre class="r"><code>y$Q19B &lt;- as.numeric(y$Q19B)
 
 for (i in 18:19){
@@ -397,16 +397,16 @@ for (i in 18:19){
   y[,i] &lt;- gsub(&quot;Some confidence&quot;, 2, y[,i])
   y[,i] &lt;- gsub(&quot;Not too much confidence&quot;, 3, y[,i])
   y[,i] &lt;- gsub(&quot;No confidence at all&quot;, 4, y[,i])
-  y[,i] &lt;- gsub(&quot;Don’t know&quot;, 99, y[,i])
-  y[,i] &lt;- gsub(&quot;Refused&quot;, 99, y[,i])
+  y[,i] &lt;- gsub(&quot;Don’t know&quot;, NA, y[,i])
+  y[,i] &lt;- gsub(&quot;Refused&quot;, NA, y[,i])
   y[,i] &lt;- as.numeric(y[,i])
 }
 
 for (i in 20:26){
   y[,i] &lt;- gsub(&quot;Approve&quot;, 1, y[,i])
-  y[,i] &lt;- gsub(&quot;Disapprove&quot;, 0, y[,i])
-  y[,i] &lt;- gsub(&quot;Don't know&quot;, 99, y[,i])
-  y[,i] &lt;- gsub(&quot;Refused&quot;, 99, y[,i])
+  y[,i] &lt;- gsub(&quot;Disapprove&quot;, 2, y[,i])
+  y[,i] &lt;- gsub(&quot;Don't know&quot;, NA, y[,i])
+  y[,i] &lt;- gsub(&quot;Refused&quot;, NA, y[,i])
   y[,i] &lt;- as.numeric(y[,i])
 }
 
@@ -414,46 +414,46 @@ y$Q32[y$Q32==&quot;Very serious&quot;] &lt;- 1
 y$Q32[y$Q32==&quot;Somewhat serious&quot;] &lt;- 2
 y$Q32[y$Q32==&quot;Not too serious&quot;] &lt;- 3
 y$Q32[y$Q32==&quot;Not a problem&quot;] &lt;- 4
-y$Q32[y$Q32==&quot;Don't know&quot;] &lt;- 99
-y$Q32[y$Q32==&quot;Refused&quot;] &lt;- 99
+y$Q32[y$Q32==&quot;Don't know&quot;] &lt;- NA
+y$Q32[y$Q32==&quot;Refused&quot;] &lt;- NA
 table(y$Q32)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 23169 14894  4474  1562  1336</code></pre>
+##     1     2     3     4 
+## 23169 14894  4474  1562</code></pre>
 <pre class="r"><code>y$Q32 &lt;- as.numeric(y$Q32)
 
 y$Q33[y$Q33==&quot;Technology can solve the problem without major changes&quot;] &lt;- 1
 y$Q33[y$Q33==&quot;Have to make major changes&quot;] &lt;- 2
 y$Q33[y$Q33==&quot;Neither (Volunteered)&quot;] &lt;- 3
 y$Q33[y$Q33==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 4
-y$Q33[y$Q33==&quot;Don't know&quot;] &lt;- 99
-y$Q33[y$Q33==&quot;Refused&quot;] &lt;- 99
+y$Q33[y$Q33==&quot;Don't know&quot;] &lt;- NA
+y$Q33[y$Q33==&quot;Refused&quot;] &lt;- NA
 table(y$Q33)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 10832 29153  1995   585  2870</code></pre>
+##     1     2     3     4 
+## 10832 29153  1995   585</code></pre>
 <pre class="r"><code>y$Q33 &lt;- as.numeric(y$Q33)
 
 y$Q39[y$Q39==&quot;Justified&quot;] &lt;- 1
 y$Q39[y$Q39==&quot;Not Justified&quot;] &lt;- 2
 y$Q39[y$Q39==&quot;Depends (Volunteered)&quot;] &lt;- 3
-y$Q39[y$Q39==&quot;Don't know&quot;] &lt;- 99
-y$Q39[y$Q39==&quot;Refused&quot;] &lt;- 99
+y$Q39[y$Q39==&quot;Don't know&quot;] &lt;- NA
+y$Q39[y$Q39==&quot;Refused&quot;] &lt;- NA
 table(y$Q39)</code></pre>
 <pre><code>## 
-##     1     2     3    99 
-## 15613 21574  3876  4372</code></pre>
+##     1     2     3 
+## 15613 21574  3876</code></pre>
 <pre class="r"><code>y$Q39 &lt;- as.numeric(y$Q39)
 
 y$Q40[y$Q40==&quot;Support&quot;] &lt;- 1
 y$Q40[y$Q40==&quot;Oppose&quot;] &lt;- 2
 y$Q40[y$Q40==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 3
-y$Q40[y$Q40==&quot;Don't know&quot;] &lt;- 99
-y$Q40[y$Q40==&quot;Refused&quot;] &lt;- 99
+y$Q40[y$Q40==&quot;Don't know&quot;] &lt;- NA
+y$Q40[y$Q40==&quot;Refused&quot;] &lt;- NA
 table(y$Q40)</code></pre>
 <pre><code>## 
-##     1     2     3    99 
-## 34822  5927   715  3971</code></pre>
+##     1     2     3 
+## 34822  5927   715</code></pre>
 <pre class="r"><code>y$Q40 &lt;- as.numeric(y$Q40)
 
 y$Q41[y$Q41==&quot;Now&quot;] &lt;- 1
@@ -461,12 +461,12 @@ y$Q41[y$Q41==&quot;In the next few years&quot;] &lt;- 2
 y$Q41[y$Q41==&quot;Not for many years&quot;] &lt;- 3
 y$Q41[y$Q41==&quot;Never&quot;] &lt;- 4
 y$Q41[y$Q41==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 5
-y$Q41[y$Q41==&quot;Don't know&quot;] &lt;- 99
-y$Q41[y$Q41==&quot;Refused&quot;] &lt;- 99
+y$Q41[y$Q41==&quot;Don't know&quot;] &lt;- NA
+y$Q41[y$Q41==&quot;Refused&quot;] &lt;- NA
 table(y$Q41)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5    99 
-## 22979 13853  4266  1351   621  2365</code></pre>
+##     1     2     3     4     5 
+## 22979 13853  4266  1351   621</code></pre>
 <pre class="r"><code>y$Q41 &lt;- as.numeric(y$Q41)
 
 y$Q42[y$Q42==&quot;Very concerned&quot;] &lt;- 1
@@ -474,12 +474,12 @@ y$Q42[y$Q42==&quot;Somewhat concerned&quot;] &lt;- 2
 y$Q42[y$Q42==&quot;Not too concerned&quot;] &lt;- 3
 y$Q42[y$Q42==&quot;Not at all concerned&quot;] &lt;- 4
 y$Q42[y$Q42==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 5
-y$Q42[y$Q42==&quot;Don't know&quot;] &lt;- 99
-y$Q42[y$Q42==&quot;Refused&quot;] &lt;- 99
+y$Q42[y$Q42==&quot;Don't know&quot;] &lt;- NA
+y$Q42[y$Q42==&quot;Refused&quot;] &lt;- NA
 table(y$Q42)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5    99 
-## 19388 15886  5954  2545   508  1154</code></pre>
+##     1     2     3     4     5 
+## 19388 15886  5954  2545   508</code></pre>
 <pre class="r"><code>y$Q42 &lt;- as.numeric(y$Q42)
 
 y$Q43[y$Q43==&quot;Droughts or water shortages&quot;] &lt;- 1
@@ -487,57 +487,57 @@ y$Q43[y$Q43==&quot;Long periods of unusually hot weather&quot;] &lt;- 2
 y$Q43[y$Q43==&quot;Rising sea levels&quot;] &lt;- 3
 y$Q43[y$Q43==&quot;Severe weather, like floods or intense storms&quot;] &lt;- 4
 y$Q43[y$Q43==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 5
-y$Q43[y$Q43==&quot;Don't know&quot;] &lt;- 99
-y$Q43[y$Q43==&quot;Refused&quot;] &lt;- 99
+y$Q43[y$Q43==&quot;Don't know&quot;] &lt;- NA
+y$Q43[y$Q43==&quot;Refused&quot;] &lt;- NA
 table(y$Q43)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5    99 
-## 20262  7018  3643 12118   759  1635</code></pre>
+##     1     2     3     4     5 
+## 20262  7018  3643 12118   759</code></pre>
 <pre class="r"><code>y$Q43 &lt;- as.numeric(y$Q43)
 
 y$Q44[y$Q44==&quot;Rich countries, such as the U.S., Japan and Germany, should do more than developing countries because they have produced&quot;] &lt;- 1
 y$Q44[y$Q44==&quot;Developing countries should do just as much as rich countries because they will produce most of the world's greenhouse g&quot;] &lt;- 2
 y$Q44[y$Q44==&quot;Rising sea levels&quot;] &lt;- 3
-y$Q44[y$Q44==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 5
-y$Q44[y$Q44==&quot;Don't know&quot;] &lt;- 99
-y$Q44[y$Q44==&quot;Refused&quot;] &lt;- 99
+y$Q44[y$Q44==&quot;Climate change does not exist (Volunteered)&quot;] &lt;- 4
+y$Q44[y$Q44==&quot;Don't know&quot;] &lt;- NA
+y$Q44[y$Q44==&quot;Refused&quot;] &lt;- NA
 table(y$Q44)</code></pre>
 <pre><code>## 
-##     1     2     5    99 
-## 23517 16858   750  4310</code></pre>
+##     1     2     4 
+## 23517 16858   750</code></pre>
 <pre class="r"><code>y$Q44 &lt;- as.numeric(y$Q44)
 
 
 y$Q70[y$Q70==&quot;Yes&quot;] &lt;- 1
 y$Q70[y$Q70==&quot;No&quot;] &lt;- 2
-y$Q70[y$Q70==&quot;Don’t know&quot;] &lt;- 99
-y$Q70[y$Q70==&quot;Refused&quot;] &lt;- 99
+y$Q70[y$Q70==&quot;Don’t know&quot;] &lt;- NA
+y$Q70[y$Q70==&quot;Refused&quot;] &lt;- NA
 table(y$Q70)</code></pre>
 <pre><code>## 
-##     1     2    99 
-## 25407 19686   342</code></pre>
+##     1     2 
+## 25407 19686</code></pre>
 <pre class="r"><code>y$Q70 &lt;- as.numeric(y$Q70)
 
 y$Q71[y$Q71==&quot;Yes&quot;] &lt;- 1
 y$Q71[y$Q71==&quot;No&quot;] &lt;- 2
-y$Q71[y$Q71==&quot;Don’t know&quot;] &lt;- 99
-y$Q71[y$Q71==&quot;Refused&quot;] &lt;- 99
+y$Q71[y$Q71==&quot;Don’t know&quot;] &lt;- NA
+y$Q71[y$Q71==&quot;Refused&quot;] &lt;- NA
 table(y$Q71)</code></pre>
 <pre><code>## 
-##     1     2    99 
-## 39195  6178    62</code></pre>
+##     1     2 
+## 39195  6178</code></pre>
 <pre class="r"><code>y$Q71 &lt;- as.numeric(y$Q71)
 
 y$Q152[y$Q152==&quot;Very important&quot;] &lt;- 1
 y$Q152[y$Q152==&quot;Somewhat important&quot;] &lt;- 2
 y$Q152[y$Q152==&quot;Not too important&quot;] &lt;- 3
 y$Q152[y$Q152==&quot;Not at all important&quot;] &lt;- 4
-y$Q152[y$Q152==&quot;Don't know&quot;] &lt;- 99
-y$Q152[y$Q152==&quot;Refused&quot;] &lt;- 99
+y$Q152[y$Q152==&quot;Don't know&quot;] &lt;- NA
+y$Q152[y$Q152==&quot;Refused&quot;] &lt;- NA
 table(y$Q152)</code></pre>
 <pre><code>## 
-##     1     2     3     4    99 
-## 23284 10005  5343  5859   944</code></pre>
+##     1     2     3     4 
+## 23284 10005  5343  5859</code></pre>
 <pre class="r"><code>y$Q152 &lt;- as.numeric(y$Q152)
 
 y$Q164[y$Q164==&quot;In paid work&quot;] &lt;- 1
@@ -547,13 +547,17 @@ y$Q164[y$Q164==&quot;Doing housework, looking after the home, children or other 
 y$Q164[y$Q164==&quot;Permanently sick or disabled&quot;] &lt;- 5
 y$Q164[y$Q164==&quot;Retired&quot;] &lt;- 6
 y$Q164[y$Q164==&quot;Unemployed and looking for a job&quot;] &lt;- 7
-y$Q164[y$Q164==&quot;Don’t know&quot;] &lt;- 99
-y$Q164[y$Q164==&quot;Refused&quot;] &lt;- 99
+y$Q164[y$Q164==&quot;Don’t know&quot;] &lt;- NA
+y$Q164[y$Q164==&quot;Refused&quot;] &lt;- NA
 table(y$Q164)</code></pre>
 <pre><code>## 
-##     1     2     3     4     5     6     7    99 
-## 23912  2709   476  8484   511  4918  4016   409</code></pre>
+##     1     2     3     4     5     6     7 
+## 23912  2709   476  8484   511  4918  4016</code></pre>
 <pre class="r"><code>y$Q164 &lt;- as.numeric(y$Q164)
+
+# We're throwing out all the missing data instead of trying to impute or code at 99
+y &lt;- y[complete.cases(y),]
+
 
 # Now we can write the final clean version of the Pew Research data 
 # write.csv(y, file = &quot;PewGlobal2015_cleanest.csv&quot;, row.names = F)
@@ -562,7 +566,7 @@ y &lt;- read.csv(&quot;PewGlobal2015_cleanest.csv&quot;, header = T, stringsAsFa
 
 ####################################################################</code></pre>
 <p>With the Pew Research individual-level data now in usable form, we need to 1) create a country-level dataset to make cross-country comparisons and 2) find and merge this data with some World Bank indicators we think will be interesting.</p>
-<p>After much discussion with our stats professor, my partner and I settled on not using the survey weights and using country means to present the data at the country level. Not the original plan - I had the weights syntax ready to go - but our professor told us to skip all that and just focus on the multivariate analysis part of the project.</p>
+<p>After much discussion with our stats professor, my partner and I settled on not using the survey weights and using country means to present the data at the country level. For this we had to mark as <code>NA</code> any “Don’t know” or “Refused” responses to the questions, which knocked out a lot of respondents but still left us with n &gt; 15K. Not the original plan - I had the weights syntax ready to go and originally recoded differently - but our professor told us to skip all that and just focus on the multivariate analysis part of the project without worrying about the DKs or trying to impute.</p>
 </div>
 <div id="create-country-level-data" class="section level1">
 <h1>Create Country-Level Data</h1>

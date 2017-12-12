@@ -72,7 +72,7 @@ t <- match(c("COUNTRY", "Q1", "Q3", "Q4", "Q6", "Q12A", "Q12B", "Q12C", "Q12D", 
 # Subsetting and writing a new .csv to avoid loading the larger file each
 # time we work on the project
 q <- x[c(t)]
-q <- q[complete.cases(q),] # no missing data
+q <- q[complete.cases(q),] # no missing data ... yet.
 write.csv(q, file = "PewGlobal2015_cleaner.csv", row.names = F)
 
 # From here forward we're just working with this .csv:
